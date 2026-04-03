@@ -1,35 +1,54 @@
-// --- CONFIGURACIÓN ---
-// Reemplazá con el número real de tu mamá (549 + área + número, sin el 15)
-// Ejemplo para Córdoba: 5493516123456
-const TELEFONO_WHATSAPP = "5493517667909"; 
+// ==========================================
+// CONFIGURACIÓN DE NÚMEROS (EL ROUTER)
+// Reemplazá estos números por los reales de cada profesional.
+// Formato: 549 + código de área + número (sin el 15).
+// Ejemplo: "5493511234567"
+// ==========================================
 
-// --- LÓGICA ---
+const TELEFONOS = {
+    "Fonoaudiología": "5493510000001", // Celular de tu mamá
+    "Kinesiología": "5493510000002",   // Celular Kinesióloga
+    "Psicología": "5493510000003",     // Celular Psicóloga
+    "Consulta general": "5493510000001" // Por defecto va a tu mamá
+};
 
-// 1. Configurar el enlace del botón flotante automáticamente
-document.getElementById('whatsappFloat').href = `https://wa.me/${5493517667909}`;
+// --- 1. FUNCIÓN PARA LOS BOTONES DE LAS TARJETAS ---
+function contactarProfesional(area, numeroDestino) {
+    const mensaje = `Hola, me gustaría hacer una consulta para el área de *${area}*.`;
+    const url = `https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+}
 
-// 2. Lógica para el formulario de consultas directas
+// --- 2. LÓGICA DEL FORMULARIO (Enrutador Inteligente) ---
 const form = document.getElementById('formConsulta');
 
 if (form) {
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Evita que la página se recargue
+        event.preventDefault(); // Evita recargar la página
 
-        // Capturamos los datos
         const nombre = document.getElementById('nombre').value;
-        const motivo = document.getElementById('motivo').value;
-        const mensaje = document.getElementById('mensaje').value;
+        const areaSeleccionada = document.getElementById('motivo').value;
+        const mensajeUsuario = document.getElementById('mensaje').value;
 
-        // Armamos el texto estructurado para tu mamá
-        // Usamos asteriscos para poner negrita en WhatsApp
-        let textoWhatsApp = `Hola, mi nombre es *${nombre}*.\n\nQuería consultar por: *${motivo}*.`;
+        // Busca el número en el diccionario, si falla usa el de consulta general
+        const numeroFinal = TELEFONOS[areaSeleccionada] || TELEFONOS["Consulta general"];
+
+        // Arma el texto
+        let textoWhatsApp = `Hola, mi nombre es *${nombre}*.\n\nQuería consultar por: *${areaSeleccionada}*.`;
         
-        if (mensaje.trim() !== "") {
-            textoWhatsApp += `\n\nMensaje adicional:\n"${mensaje}"`;
+        if (mensajeUsuario.trim() !== "") {
+            textoWhatsApp += `\n\nMensaje adicional:\n"${mensajeUsuario}"`;
         }
 
-        // Abrimos WhatsApp con el texto codificado
-        const url = `https://wa.me/${TELEFONO_WHATSAPP}?text=${encodeURIComponent(textoWhatsApp)}`;
+        // Abre WhatsApp
+        const url = `https://wa.me/${numeroFinal}?text=${encodeURIComponent(textoWhatsApp)}`;
         window.open(url, "_blank");
     });
+}
+
+// --- 3. BOTÓN FLOTANTE GENERAL ---
+// Configuramos el botón flotante para que mande mensaje al celular principal (tu mamá)
+const btnFlotante = document.getElementById('whatsappFloat');
+if (btnFlotante) {
+    btnFlotante.href = `https://wa.me/${TELEFONOS["Consulta general"]}`;
 }
