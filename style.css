@@ -205,31 +205,39 @@ h2 {
 .footer .container { padding: 40px 20px; }
 .copyright { margin-top: 15px; font-size: 0.8rem; color: #bbb; }
 
-.whatsapp-float {
+/* --- BOTÓN FLOTANTE DE COMPARTIR --- */
+.share-float {
   position: fixed;
   width: 60px;
   height: 60px;
   bottom: 40px;
   right: 40px;
-  background-color: #1eb5db;
+  background-color: #1bb7d5; /* El celeste que estás usando */
   color: #FFF;
+  border: none;
   border-radius: 50px;
   text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
+  font-size: 24px;
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.15);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
+  cursor: pointer;
   transition: var(--transition);
 }
 
-.whatsapp-float:hover { transform: scale(1.1); }
+.share-float:hover { 
+  transform: scale(1.1); 
+  background-color: #179eb8; /* Un tono un poquito más oscuro para el efecto hover */
+}
 
 @media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hero-content h1 { font-size: 2.2rem; }
-  .form-container { padding: 30px 20px; }
-  .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; font-size: 25px; }
+  .share-float { 
+    width: 50px; 
+    height: 50px; 
+    bottom: 20px; 
+    right: 20px; 
+    font-size: 20px; 
+  }
 }

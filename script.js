@@ -46,9 +46,33 @@ if (form) {
     });
 }
 
-// --- 3. BOTÓN FLOTANTE GENERAL ---
-// Configuramos el botón flotante para que mande mensaje al celular principal (tu mamá)
-const btnFlotante = document.getElementById('whatsappFloat');
-if (btnFlotante) {
-    btnFlotante.href = `https://wa.me/${TELEFONOS["Consulta general"]}`;
+// --- 3. LÓGICA DEL BOTÓN DE COMPARTIR (Web Share API) ---
+const btnCompartir = document.getElementById('btnCompartir');
+
+if (btnCompartir) {
+    btnCompartir.addEventListener('click', async () => {
+        // Datos que se van a compartir
+        const shareData = {
+            title: 'Centro Integral de Salud',
+            text: '¡Mirá el nuevo centro de salud integral especializado en Fonoaudiología, Kinesiología y Psicología!',
+            url: window.location.href // Captura automáticamente tu link de GitHub Pages
+        };
+
+        // Verifica si el navegador soporta el menú nativo de compartir
+        if (navigator.share) {
+            try {
+                await navigator.share(shareData);
+                console.log('Página compartida con éxito');
+            } catch (err) {
+                console.log('Error al compartir o cancelado por el usuario:', err);
+            }
+        } else {
+            // Plan B (Para PCs o navegadores no compatibles): Copia el link al portapapeles
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert("¡Link copiado al portapapeles! Ya podés pegarlo y compartirlo.");
+            }).catch(err => {
+                console.error("No se pudo copiar el link: ", err);
+            });
+        }
+    });
 }
