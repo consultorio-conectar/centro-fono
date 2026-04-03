@@ -241,3 +241,52 @@ h2 {
     font-size: 20px; 
   }
 }
+
+/* --- ADAPTACIÓN PARA CELULARES (Mobile Responsive) --- */
+@media (max-width: 768px) {
+  /* 1. Arreglamos la barra superior (Navbar) */
+  .container_nav {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px 0;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 15px;
+    justify-content: center;
+    padding-bottom: 5px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+
+  /* 2. Ajustamos los textos del inicio (Hero) para que no ocupen toda la pantalla */
+  .hero {
+    margin-top: 100px; /* Más margen porque la barra superior ahora es más alta */
+    padding: 0 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    margin: 15px auto 30px auto;
+  }
+
+  /* 3. Achicamos un poco el botón flotante */
+  .share-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 20px;
+  }
+}
