@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Centro de Fonoaudiología [Nombre]</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="container_nav">
+    <div class="logo">Logo / Nombre</div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre">Sobre Mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#consultas">Consultas</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="inicio" class="hero">
+  <div class="hero-content">
+    <h1>Centro de Fonoaudiología [Nombre]</h1>
+    <p>Atención profesional y personalizada en lenguaje, habla y voz para niños y adultos.</p>
+    <a href="#consultas" class="btn-principal">Sacar Turno Online</a>
+  </div>
+</header>
+
+<section id="sobre" class="container">
+  <div class="sobre-grid">
+    <div class="sobre-foto">
+      <div class="foto-placeholder">FOTO</div>
+    </div>
+    <div class="sobre-info">
+      <h2>Lic. [Nombre de tu mamá]</h2>
+      <span class="subtitulo">Fonoaudióloga | M.P. XXXX</span>
+      <p>Con más de [X] años de experiencia, mi objetivo es brindar herramientas efectivas para mejorar la comunicación y calidad de vida de mis pacientes.</p>
+      <p>Especializada en [Especialidad 1] y [Especialidad 2].</p>
+    </div>
+  </div>
+</section>
+
+<section id="servicios" class="servicios-section">
+  <div class="container">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards-grid">
+      
+      <div class="card">
+        <i class="fas fa-child icon-servicio"></i>
+        <h3>Evaluación del Lenguaje</h3>
+        <p>Diagnóstico integral en niños con retrasos o trastornos del desarrollo del lenguaje.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-comments icon-servicio"></i>
+        <h3>Terapia del Habla</h3>
+        <p>Tratamiento de dificultades de articulación, fluidez (tartamudez) y habla agramatical.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-microphone-alt icon-servicio"></i>
+        <h3>Terapia de Voz</h3>
+        <p>Rehabilitación de disfonías en profesionales de la voz (docentes, cantantes) y público general.</p>
+      </div>
+
+      <div class="card">
+        <i class="fas fa-utensils icon-servicio"></i>
+        <h3>Deglución</h3>
+        <p>Terapia para dificultades en el proceso de tragar (disfagia) en niños y adultos.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="consultas" class="container">
+  <div class="form-container">
+    <h2>Consultas Directas</h2>
+    <p>Dejanos tus datos y motivo de consulta. Te responderemos por WhatsApp a la brevedad.</p>
+    
+    <form id="formConsulta">
+      <div class="input-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+      </div>
+
+      <div class="input-group">
+        <label for="motivo">Motivo de consulta</label>
+        <select id="motivo" required>
+          <option value="" disabled selected>Seleccioná una opción...</option>
+          <option value="Evaluación del lenguaje">Evaluación del lenguaje</option>
+          <option value="Terapia del habla">Terapia del habla</option>
+          <option value="Terapia de voz">Terapia de voz</option>
+          <option value="Deglución">Deglución</option>
+          <option value="Consulta general">Consulta general / Otro</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="mensaje">Tu mensaje (Opcional)</label>
+        <textarea id="mensaje" rows="4" placeholder="Escribí brevemente tu consulta..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar a WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p><strong>Centro de Fonoaudiología [Nombre]</strong></p>
+    <p>📍 Dirección del Consultorio, Córdoba</p>
+    <p>Matrícula Profesional: XXXX</p>
+    <p class="copyright">© 2024 - Diseñado con ❤️ para mamá</p>
+  </div>
+</footer>
+
+<a href="#" class="whatsapp-float" id="whatsappFloat" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
