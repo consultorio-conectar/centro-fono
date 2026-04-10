@@ -1,8 +1,8 @@
-/* Variables de colores (fáciles de cambiar si a tu mamá le gusta otro tono) */
+/* Variables de colores */
 :root {
-    --color-principal: #4A90E2; /* Azul confianza */
-    --color-secundario: #F5A623; /* Naranja cálido */
-    --color-fondo: #F8FBFF; /* Blanco tiza/celeste muy claro */
+    --color-principal: #4A90E2; 
+    --color-secundario: #F5A623; 
+    --color-fondo: #F8FBFF; 
     --color-texto: #333333;
     --color-blanco: #ffffff;
 }
@@ -90,12 +90,12 @@ h2 {
     margin: 0 auto;
 }
 
-/* --- TARJETAS DE SERVICIOS --- */
+/* --- TARJETAS DE SERVICIOS (Con estilos para la animación JS) --- */
 .contenedor-tarjetas {
     display: flex;
     gap: 30px;
     justify-content: center;
-    flex-wrap: wrap; /* Clave para celulares */
+    flex-wrap: wrap; 
 }
 
 .tarjeta {
@@ -105,10 +105,20 @@ h2 {
     width: 320px;
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Ocultamos la tarjeta inicialmente para que el JS la anime */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
 }
 
-.tarjeta:hover {
+/* Clase que agrega el JS cuando scrolleamos */
+.tarjeta.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto hover */
+.tarjeta.visible:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     border-bottom: 5px solid var(--color-secundario);

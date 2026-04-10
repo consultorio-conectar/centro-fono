@@ -1,124 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centro Integral de Salud [Nombre]</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lic. [NOMBRE_DE_TU_MAMÁ] - Fonoaudiología Integral</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav class="navbar">
-  <div class="container_nav">
-    <div class="logo">Centro [Nombre]</div>
-    <ul class="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#especialidades">Especialidades</a></li>
-      <li><a href="#consultas">Consultas</a></li>
-    </ul>
-  </div>
-</nav>
+    <header class="hero">
+        <div class="hero-contenido">
+            <h1>Lic. [NOMBRE_DE_TU_MAMÁ]</h1>
+            <h2>Fonoaudiología Integral</h2>
+            <p>Atención personalizada para potenciar tu comunicación, voz y deglución en todas las etapas de la vida.</p>
+            <a href="#contacto" class="btn-principal">Solicitar Turno</a>
+        </div>
+    </header>
 
-<header id="inicio" class="hero">
-  <div class="hero-content">
-    <h1>Salud Integral en un solo lugar</h1>
-    <p>Equipo interdisciplinario especializado en Fonoaudiología, Kinesiología y Psicología.</p>
-    <a href="#especialidades" class="btn-principal">Ver Especialidades</a>
-  </div>
-</header>
+    <section class="sobre-mi" id="sobre-mi">
+        <div class="contenedor">
+            <h2>Sobre Mí</h2>
+            <p>Soy Licenciada en Fonoaudiología con amplia experiencia en el tratamiento de niños, adolescentes y adultos. Mi enfoque se basa en brindar una atención cálida, humana y basada en evidencia científica, adaptando cada terapia a las necesidades únicas de cada paciente para mejorar su calidad de vida.</p>
+        </div>
+    </section>
 
-<section id="especialidades" class="servicios-section">
-  <div class="container">
-    <h2>Nuestras Especialidades</h2>
-    <p class="descripcion-seccion">Elegí el área que buscás y contactate directamente con nuestras profesionales para coordinar tu turno.</p>
-    
-    <div class="cards-grid">
-      
-      <div class="card">
-        <div class="foto-placeholder">FOTO</div>
-        <h3>Fonoaudiología</h3>
-        <p class="subtitulo">Lic. [Nombre de tu mamá]</p>
-        <p>Especialista en evaluación y tratamiento de lenguaje, habla, voz y deglución.</p>
-        <button onclick="contactarProfesional('Fonoaudiología', '5493510000001')" class="btn-wsp-card">
-          <i class="fab fa-whatsapp"></i> Consultar a Fono
-        </button>
-      </div>
+    <section class="servicios" id="servicios">
+        <div class="contenedor">
+            <h2>Áreas de Atención</h2>
+            <div class="contenedor-tarjetas">
+                
+                <div class="tarjeta">
+                    <div class="icono">🗣️</div>
+                    <h3>Lenguaje y Habla</h3>
+                    <p>Evaluación y tratamiento de retrasos del lenguaje, tartamudez y dificultades en la articulación y pronunciación.</p>
+                </div>
 
-      <div class="card">
-        <div class="foto-placeholder">FOTO</div>
-        <h3>Kinesiología</h3>
-        <p class="subtitulo">Lic. [Nombre Kinesióloga]</p>
-        <p>Rehabilitación física, traumatológica, post-operatoria y postural.</p>
-        <button onclick="contactarProfesional('Kinesiología', '5493510000002')" class="btn-wsp-card">
-          <i class="fab fa-whatsapp"></i> Consultar a Kine
-        </button>
-      </div>
+                <div class="tarjeta">
+                    <div class="icono">🎙️</div>
+                    <h3>Rehabilitación Vocal</h3>
+                    <p>Cuidado de la voz para profesionales, docentes, cantantes y tratamiento de disfonías agudas o crónicas.</p>
+                </div>
 
-      <div class="card">
-        <div class="foto-placeholder">FOTO</div>
-        <h3>Psicología</h3>
-        <p class="subtitulo">Lic. [Nombre Psicóloga]</p>
-        <p>Atención clínica y acompañamiento terapéutico para niños, adolescentes y adultos.</p>
-        <button onclick="contactarProfesional('Psicología', '5493510000003')" class="btn-wsp-card">
-          <i class="fab fa-whatsapp"></i> Consultar a Psico
-        </button>
-      </div>
+                <div class="tarjeta">
+                    <div class="icono">👅</div>
+                    <h3>Deglución</h3>
+                    <p>Terapia fonoestomatológica, reeducación de la deglución atípica y respiración bucal.</p>
+                </div>
 
-    </div>
-  </div>
-</section>
+            </div>
+        </div>
+    </section>
 
-<section id="consultas" class="container">
-  <div class="form-container">
-    <h2>¿Dudas Generales?</h2>
-    <p>Si no sabés a qué área dirigirte o querés dejar un mensaje detallado, usá este formulario.</p>
-    
-    <form id="formConsulta">
-      <div class="input-group">
-        <label for="nombre">Nombre completo</label>
-        <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
-      </div>
+    <section class="faq">
+        <div class="contenedor">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h4>¿Atendés por obras sociales o prepagas?</h4>
+                <p>Atiendo de forma particular y emito factura para que puedas gestionar el reintegro con tu obra social o prepaga.</p>
+            </div>
+            <div class="faq-item">
+                <h4>¿Cuánto dura una sesión?</h4>
+                <p>Las sesiones tienen una duración aproximada de 40 a 45 minutos, dependiendo del tratamiento y la edad del paciente.</p>
+            </div>
+        </div>
+    </section>
 
-      <div class="input-group">
-        <label for="motivo">¿Con qué área querés comunicarte?</label>
-        <select id="motivo" required>
-          <option value="" disabled selected>Seleccioná una opción...</option>
-          <option value="Fonoaudiología">Fonoaudiología</option>
-          <option value="Kinesiología">Kinesiología</option>
-          <option value="Psicología">Psicología</option>
-          <option value="Consulta general">No estoy seguro / Consulta general</option>
-        </select>
-      </div>
+    <footer>
+        <p>&copy; 2026 Lic. [NOMBRE_DE_TU_MAMÁ]. Todos los derechos reservados.</p>
+    </footer>
 
-      <div class="input-group">
-        <label for="mensaje">Tu mensaje</label>
-        <textarea id="mensaje" rows="4" placeholder="Contanos brevemente tu caso..."></textarea>
-      </div>
+    <a href="https://wa.me/549[NÚMERO_DE_WHATSAPP]?text=Hola,%20me%20gustaría%20solicitar%20un%20turno%20para%20fonoaudiología." class="whatsapp-flotante" target="_blank" id="contacto">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
 
-      <button type="submit" class="btn-enviar">Enviar Consulta</button>
-    </form>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <p><strong>Centro Integral [Nombre]</strong></p>
-    <p>📍 [Dirección del Consultorio], Córdoba</p>
-    <p class="copyright">© 2024 - Diseñado por el Ingeniero Fabri 💻</p>
-  </div>
-</footer>
-
-<button class="share-float" id="btnCompartir" title="Compartir página">
-  <i class="fas fa-share-alt"></i>
-</button>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
