@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centro Integral de Salud [Nombre]</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="container_nav">
+    <div class="logo">Centro [Nombre]</div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#consultas">Consultas</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="inicio" class="hero">
+  <div class="hero-content">
+    <h1>Salud Integral en un solo lugar</h1>
+    <p>Equipo interdisciplinario especializado en Fonoaudiología, Kinesiología y Psicología.</p>
+    <a href="#especialidades" class="btn-principal">Ver Especialidades</a>
+  </div>
+</header>
+
+<section id="especialidades" class="servicios-section">
+  <div class="container">
+    <h2>Nuestras Especialidades</h2>
+    <p class="descripcion-seccion">Elegí el área que buscás y contactate directamente con nuestras profesionales para coordinar tu turno.</p>
+    
+    <div class="cards-grid">
+      
+      <div class="card">
+        <div class="foto-placeholder">FOTO</div>
+        <h3>Fonoaudiología</h3>
+        <p class="subtitulo">Lic. [Nombre de tu mamá]</p>
+        <p>Especialista en evaluación y tratamiento de lenguaje, habla, voz y deglución.</p>
+        <button onclick="contactarProfesional('Fonoaudiología', '5493510000001')" class="btn-wsp-card">
+          <i class="fab fa-whatsapp"></i> Consultar a Fono
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="foto-placeholder">FOTO</div>
+        <h3>Kinesiología</h3>
+        <p class="subtitulo">Lic. [Nombre Kinesióloga]</p>
+        <p>Rehabilitación física, traumatológica, post-operatoria y postural.</p>
+        <button onclick="contactarProfesional('Kinesiología', '5493510000002')" class="btn-wsp-card">
+          <i class="fab fa-whatsapp"></i> Consultar a Kine
+        </button>
+      </div>
+
+      <div class="card">
+        <div class="foto-placeholder">FOTO</div>
+        <h3>Psicología</h3>
+        <p class="subtitulo">Lic. [Nombre Psicóloga]</p>
+        <p>Atención clínica y acompañamiento terapéutico para niños, adolescentes y adultos.</p>
+        <button onclick="contactarProfesional('Psicología', '5493510000003')" class="btn-wsp-card">
+          <i class="fab fa-whatsapp"></i> Consultar a Psico
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="consultas" class="container">
+  <div class="form-container">
+    <h2>¿Dudas Generales?</h2>
+    <p>Si no sabés a qué área dirigirte o querés dejar un mensaje detallado, usá este formulario.</p>
+    
+    <form id="formConsulta">
+      <div class="input-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+      </div>
+
+      <div class="input-group">
+        <label for="motivo">¿Con qué área querés comunicarte?</label>
+        <select id="motivo" required>
+          <option value="" disabled selected>Seleccioná una opción...</option>
+          <option value="Fonoaudiología">Fonoaudiología</option>
+          <option value="Kinesiología">Kinesiología</option>
+          <option value="Psicología">Psicología</option>
+          <option value="Consulta general">No estoy seguro / Consulta general</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="mensaje">Tu mensaje</label>
+        <textarea id="mensaje" rows="4" placeholder="Contanos brevemente tu caso..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar Consulta</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p><strong>Centro Integral [Nombre]</strong></p>
+    <p>📍 [Dirección del Consultorio], Córdoba</p>
+    <p class="copyright">© 2024 - Diseñado por el Ingeniero Fabri 💻</p>
+  </div>
+</footer>
+
+<button class="share-float" id="btnCompartir" title="Compartir página">
+  <i class="fas fa-share-alt"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

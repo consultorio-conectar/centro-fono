@@ -1,0 +1,188 @@
+/* Variables de colores (fáciles de cambiar si a tu mamá le gusta otro tono) */
+:root {
+    --color-principal: #4A90E2; /* Azul confianza */
+    --color-secundario: #F5A623; /* Naranja cálido */
+    --color-fondo: #F8FBFF; /* Blanco tiza/celeste muy claro */
+    --color-texto: #333333;
+    --color-blanco: #ffffff;
+}
+
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--color-principal);
+    margin-bottom: 30px;
+}
+
+/* --- HERO (Inicio) --- */
+.hero {
+    background: linear-gradient(135deg, var(--color-principal), #83B8F2);
+    color: var(--color-blanco);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--color-blanco);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.btn-principal {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.btn-principal:hover {
+    background-color: #d48a17;
+}
+
+/* --- SECCIONES GENERALES --- */
+.sobre-mi, .servicios, .faq {
+    padding: 80px 0;
+}
+
+.sobre-mi {
+    background-color: var(--color-blanco);
+}
+
+.sobre-mi p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- TARJETAS DE SERVICIOS --- */
+.contenedor-tarjetas {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Clave para celulares */
+}
+
+.tarjeta {
+    background: var(--color-blanco);
+    padding: 40px 20px;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--color-secundario);
+}
+
+.icono {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.tarjeta h3 {
+    margin-bottom: 15px;
+    color: var(--color-principal);
+}
+
+/* --- PREGUNTAS FRECUENTES --- */
+.faq {
+    background-color: var(--color-blanco);
+}
+
+.faq-item {
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    text-align: left;
+    background-color: var(--color-fondo);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid var(--color-principal);
+}
+
+.faq-item h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* --- BOTÓN FLOTANTE WHATSAPP --- */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-flotante img {
+    width: 35px;
+    height: 35px;
+}
+
+.whatsapp-flotante:hover {
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVE PARA CELULARES --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .hero h2 { font-size: 1.5rem; }
+    h2 { font-size: 2rem; }
+    .contenedor-tarjetas { flex-direction: column; align-items: center; }
+}
