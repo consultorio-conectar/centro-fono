@@ -41,10 +41,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // El número de tu mamá (ya puesto con el código de Argentina y Córdoba)
             const numeroWhatsApp = "5493512354594"; 
 
-            // Armamos el texto final que le va a llegar a ella
-            const textoParaEnviar = `Hola Fonoaudiologa Maria Eugenia Galian, mi nombre es ${nombre}. Quería hacerle la siguiente consulta: ${mensaje}`;
-
-            // Creamos el link que abre WhatsApp con el mensaje listo
+            // Dentro de la función del formulario en script.js:
+            const textoParaEnviar = `Hola Fonoaudióloga Maria Eugenia Galian, mi nombre es ${nombre}. Quería hacerle la siguiente consulta: ${mensaje}`;
+            
+// Creamos el link que abre WhatsApp con el mensaje listo
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoParaEnviar)}`;
 
             // Abrimos WhatsApp en una pestaña nueva
