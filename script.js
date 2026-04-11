@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const numeroWhatsApp = "5493512354594"; 
 
             // Armamos el texto final que le va a llegar a ella
-            const textoParaEnviar = `Hola Licenciada, mi nombre es ${nombre}. Quería hacerle la siguiente consulta: ${mensaje}`;
+            const textoParaEnviar = `Hola Fonoaudiologa Maria Eugenia Galian, mi nombre es ${nombre}. Quería hacerle la siguiente consulta: ${mensaje}`;
 
             // Creamos el link que abre WhatsApp con el mensaje listo
             const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(textoParaEnviar)}`;
