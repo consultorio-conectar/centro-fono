@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lic. [NOMBRE_DE_TU_MAMÁ] - Fonoaudiología Integral</title>
+    <title>Fga. Maria Eugenia Galian - Fonoaudiología Integral</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     
@@ -13,17 +13,22 @@
 
     <header class="hero">
         <div class="hero-contenido">
-            <h1>Lic. [NOMBRE_DE_TU_MAMÁ]</h1>
+            <h1>Fga. Maria Eugenia Galian</h1>
             <h2>Fonoaudiología Integral</h2>
             <p>Atención personalizada para potenciar tu comunicación, voz y deglución en todas las etapas de la vida.</p>
-            <a href="#contacto" class="btn-principal">Solicitar Turno</a>
+            <a href="https://wa.me/5493512354594?text=Hola%20Fono,%20me%20gustaría%20solicitar%20un%20turno." target="_blank" class="btn-principal">Solicitar Turno</a>
         </div>
     </header>
 
     <section class="sobre-mi" id="sobre-mi">
-        <div class="contenedor">
-            <h2>Sobre Mí</h2>
-            <p>Soy Licenciada en Fonoaudiología con amplia experiencia en el tratamiento de niños, adolescentes y adultos. Mi enfoque se basa en brindar una atención cálida, humana y basada en evidencia científica, adaptando cada terapia a las necesidades únicas de cada paciente para mejorar su calidad de vida.</p>
+        <div class="contenedor sobre-mi-flex">
+            <div class="sobre-mi-foto">
+                <img src="fotos/foto-mama.jpeg" alt="Fga. Maria Eugenia Galian" class="foto-perfil">
+            </div>
+            <div class="sobre-mi-texto">
+                <h2>Sobre Mí</h2>
+                <p>Soy una Fonoaudióloga con experiencia en el tratamiento de niños, adolescentes y adultos. Mi enfoque se basa en brindar una atención cálida, humana y basada en evidencia científica, adaptando cada terapia a las necesidades únicas de cada paciente para mejorar su calidad de vida.</p>
+            </div>
         </div>
     </section>
 
@@ -35,20 +40,43 @@
                 <div class="tarjeta">
                     <div class="icono">🗣️</div>
                     <h3>Lenguaje y Habla</h3>
-                    <p>Evaluación y tratamiento de retrasos del lenguaje, tartamudez y dificultades en la articulación y pronunciación.</p>
-                </div>
-
-                <div class="tarjeta">
-                    <div class="icono">🎙️</div>
-                    <h3>Rehabilitación Vocal</h3>
-                    <p>Cuidado de la voz para profesionales, docentes, cantantes y tratamiento de disfonías agudas o crónicas.</p>
+                    <p>Evaluación y tratamiento del lenguaje, tartamudez y dificultades en la articulación y pronunciación.</p>
                 </div>
 
                 <div class="tarjeta">
                     <div class="icono">👅</div>
-                    <h3>Deglución</h3>
-                    <p>Terapia fonoestomatológica, reeducación de la deglución atípica y respiración bucal.</p>
+                    <h3>Fonoestomatología</h3>
+                    <p>Rehabilitación de las funciones del sistema estomatognático, respiración bucal y deglución atípica.</p>
                 </div>
+
+                <div class="tarjeta">
+                    <div class="icono">🍽️</div>
+                    <h3>Trastornos Deglutorios</h3>
+                    <p>Evaluación y abordaje terapéutico de alteraciones y dificultades en el proceso de la deglución.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="servicios" style="background-color: var(--color-fondo);" id="lugares">
+        <div class="contenedor">
+            <h2>Lugares de Atención</h2>
+            <div class="contenedor-tarjetas">
+                
+                <a href="https://maps.google.com/?q=Carrefour+Recta+Martinolli+7820+Cordoba" target="_blank" class="tarjeta tarjeta-enlace">
+                    <div class="icono">📍</div>
+                    <h3>Consultorio AMAEC</h3>
+                    <p>Carrefour Recta Martinolli 7820<br>Córdoba Capital</p>
+                    <span class="ver-mapa">Ver en Google Maps →</span>
+                </a>
+
+                <a href="https://maps.google.com/?q=Caseros+2409+Cordoba" target="_blank" class="tarjeta tarjeta-enlace">
+                    <div class="icono">📍</div>
+                    <h3>RealizARTE</h3>
+                    <p>Caseros 2409<br>Córdoba Capital</p>
+                    <span class="ver-mapa">Ver en Google Maps →</span>
+                </a>
 
             </div>
         </div>
@@ -59,7 +87,7 @@
             <h2>Preguntas Frecuentes</h2>
             <div class="faq-item">
                 <h4>¿Atendés por obras sociales o prepagas?</h4>
-                <p>Atiendo de forma particular y emito factura para que puedas gestionar el reintegro con tu obra social o prepaga.</p>
+                <p>Te facturamos y pedís el reintegro en tu prepaga u obra social. Sujeto a la cobertura de cada plan.</p>
             </div>
             <div class="faq-item">
                 <h4>¿Cuánto dura una sesión?</h4>
@@ -68,11 +96,24 @@
         </div>
     </section>
 
+    <section class="contacto-formulario" id="contacto-form">
+        <div class="contenedor">
+            <h2>Dejanos tu consulta</h2>
+            <p>Si tenés alguna duda o querés pedir un turno, escribinos acá y te responderemos a la brevedad.</p>
+            
+            <form id="form-consultas" class="formulario">
+                <input type="text" id="nombre-paciente" placeholder="Tu Nombre y Apellido" required>
+                <textarea id="mensaje-paciente" rows="4" placeholder="Escribí tu pregunta acá..." required></textarea>
+                <button type="submit" class="btn-principal btn-ancho">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Lic. [NOMBRE_DE_TU_MAMÁ]. Todos los derechos reservados.</p>
+        <p>&copy; 2026 Fga. Maria Eugenia Galian. Todos los derechos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/549[NÚMERO_DE_WHATSAPP]?text=Hola,%20me%20gustaría%20solicitar%20un%20turno%20para%20fonoaudiología." class="whatsapp-flotante" target="_blank" id="contacto">
+    <a href="https://wa.me/5493512354594?text=Hola,%20me%20gustaría%20solicitar%20un%20turno%20para%20fonoaudiología." class="whatsapp-flotante" target="_blank" id="contacto">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
     </a>
 

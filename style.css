@@ -80,14 +80,39 @@ h2 {
     padding: 80px 0;
 }
 
+/* --- SECCIÓN SOBRE MÍ (Actualizada con Foto) --- */
 .sobre-mi {
     background-color: var(--color-blanco);
 }
 
-.sobre-mi p {
-    font-size: 1.1rem;
-    max-width: 800px;
+.sobre-mi-flex {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+    text-align: left; 
+}
+
+.sobre-mi-foto {
+    flex: 1; 
+    max-width: 300px;
     margin: 0 auto;
+}
+
+.foto-perfil {
+    width: 100%; 
+    aspect-ratio: 1 / 1; /* Fuerza a que sea un cuadrado perfecto */
+    object-fit: cover; /* Evita que la foto se estire o deforme */
+    border-radius: 50%; /* Convierte el cuadrado en un círculo */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    border: 5px solid var(--color-fondo); /* Un bordecito sutil */
+}
+
+.sobre-mi-texto {
+    flex: 2; 
+}
+
+.sobre-mi-texto p {
+    font-size: 1.1rem;
 }
 
 /* --- TARJETAS DE SERVICIOS (Con estilos para la animación JS) --- */
@@ -195,4 +220,81 @@ footer {
     .hero h2 { font-size: 1.5rem; }
     h2 { font-size: 2rem; }
     .contenedor-tarjetas { flex-direction: column; align-items: center; }
+    
+    /* Adaptación de la sección Sobre Mí para móviles */
+    .sobre-mi-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .sobre-mi-foto {
+        margin-bottom: 20px;
+    }
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+.contacto-formulario {
+    background-color: var(--color-fondo);
+    padding: 60px 0 80px 0;
+}
+
+.contacto-formulario p {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--color-blanco);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.formulario input:focus, .formulario textarea:focus {
+    outline: none;
+    border-color: var(--color-principal);
+    border-width: 2px; /* Resalta cuando escriben */
+}
+
+.btn-ancho {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* Estilos para las tarjetas que son links */
+.tarjeta-enlace {
+    text-decoration: none; /* Quita el subrayado del link */
+    color: inherit;       /* Mantiene el color del texto original */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+}
+
+.tarjeta-enlace:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.ver-mapa {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: var(--color-principal);
+    font-weight: 600;
 }
