@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultorio Conectar Meraki</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="bg-decor">
+  <div class="shape s1"></div>
+  <div class="shape s2"></div>
+  <div class="shape s3"></div>
+</div>
+
+<nav class="navbar">
+  <div class="container_nav">
+    <div class="logo">
+      <span style="color: #8c6eb5;">CONSULTORIO</span> <span style="color: #58b6c7;">CONECTAR MERAKI</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#especialidades">Especialidades</a></li>
+      <li><a href="#consultas">Consultas</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="inicio" class="hero">
+  <div class="hero-content fade-in-up">
+    <div class="corazon-logo floating">
+      <i class="far fa-heart"></i>
+    </div>
+    <h1>Centro de <span id="typing-text" class="lila-text"></span></h1>
+    <p>Equipo especializado en Psicología y Fonoaudiología. Acompañamos procesos desde una escucha cercana, empática y respetuosa.</p>
+    <a href="#especialidades" class="btn-principal">Explorar áreas</a>
+  </div>
+</header>
+
+<section id="especialidades" class="servicios-section">
+  <div class="container">
+    <h2 class="titulo-seccion reveal"><span class="punto-lila">•</span> Nuestras Especialidades <span class="punto-cian">•</span></h2>
+    <hr class="divisor reveal">
+    
+    <div class="cards-grid">
+      
+      <div class="card card-fono reveal">
+        <div class="foto-contenedor">
+          <img src=img\fono.jpeg alt="Lic. Maria Eugenia Galian" onerror="this.src='https://via.placeholder.com/150?text=Fonoaudióloga'">
+        </div>
+        <h3 class="titulo-cian">Fonoaudiología</h3>
+        <p class="subtitulo cian-text">Fga. Maria Eugenia Galian</p>
+        <p>Especialista dedicada a la evaluación, diagnóstico y tratamiento de alteraciones en el lenguaje, 
+          el habla, la voz y la deglución. Brinda un acompañamiento personalizado a cada paciente, enfocándose en 
+          potenciar sus habilidades comunicativas y mejorar su calidad de vida desde una atención humana y profesional.</p>
+        <button onclick="contactarProfesional('Fonoaudiología', '5493512354594')" class="btn-wsp-card fono-btn">
+          <i class="fab fa-whatsapp"></i> Consultar a Fono
+        </button>
+      </div>
+
+      <div class="card card-psico reveal">
+        <div class="foto-contenedor">
+          <img src=img\psico.png alt="Lic. Marchetti" onerror="this.src='https://via.placeholder.com/150?text=Psicóloga'">
+        </div>
+        <h3 class="titulo-lila">Psicología</h3>
+        <p class="subtitulo lila-text">Lic. Marchetti</p>
+        <p>Licenciada en Psicología con experiencia en el abordaje clínico de niños, adolescentes y familias. Acompaña procesos emocionales, conductuales 
+          y de aprendizaje desde una escucha cercana y empática, atendiendo siempre a la singularidad de cada paciente y su contexto para favorecer su bienestar integral.</p>
+        <button onclick="contactarProfesional('Psicología', '5493533438382')" class="btn-wsp-card psico-btn">
+          <i class="fab fa-whatsapp"></i> Consultar a Psico
+        </button>
+        <a href="https://taplink.cc/lic.marchetti" target="_blank" class="link-bio">Saber más sobre la Licenciada</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="consultas" class="container">
+  <div class="form-container reveal">
+    <h2>¿Dudas Generales?</h2>
+    <p style="text-align: center; margin-bottom: 20px; color: var(--color-texto-suave);">Dejanos tu mensaje y te derivaremos al área correspondiente.</p>
+    
+    <form id="formConsulta">
+      <div class="input-group">
+        <label for="nombre">Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+      </div>
+
+      <div class="input-group">
+        <label for="motivo">¿Con qué área querés comunicarte?</label>
+        <select id="motivo" required>
+          <option value="" disabled selected>Seleccioná una opción...</option>
+          <option value="Fonoaudiología">Fonoaudiología</option>
+          <option value="Psicología">Psicología</option>
+          <option value="Consulta general">Consulta general / Administrativa</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="mensaje">Tu mensaje</label>
+        <textarea id="mensaje" rows="4" placeholder="Contanos brevemente tu caso..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar Consulta</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p><strong>Consultorio Conectar Meraki</strong></p>
+    <p>📍 Córdoba, Argentina.</p>
+    <p class="copyright">© 2026 - Diseñado por Glorio </p>
+  </div>
+</footer>
+
+<button class="share-float" id="btnCompartir" title="Compartir página">
+  <i class="fas fa-share-alt"></i>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
